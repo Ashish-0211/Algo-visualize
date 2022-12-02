@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Zen Dots", cursive;
+  font-size: 0.8rem;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #212833;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  width: 100%;
+  flex: 0 1 70px;
+  height: 70px;
+  overflow: hidden;
+  /* background-color: white; */
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(21, 109, 214, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  position: relative;
+}
+
+#title {
+  text-align: center;
+  font-size: 27px;
+  color: black;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+#OperationContainer {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+
+.button {
+  width: 55px;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+#InsertNodeField,
+#DeleteNodeField {
+  width: 120px;
+}
+#DeleteNodeField {
+  margin-left: 10px;
+}
+
+.Canvas {
+  width: 100%;
+  flex: 1 1 auto;
+  /* background-color: #212833; */
+  background-image: linear-gradient(
+    to right top,
+    #99135f,
+    #721f5f,
+    #4c2255,
+    #2c1f43,
+    #15172c,
+    #151b32,
+    #132038,
+    #11243e,
+    #16396a,
+    #254f99,
+    #3f65c9,
+    #6279fa
+  );
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.indicator {
+  position: absolute;
+}
+.indicator text {
+  font-size: 20px !important;
+}
+
+svg {
+  margin-top: 5px;
+  width: 100%;
+  /* max-width: 1200px; */
+  height: 100%;
+  overflow: scroll;
+}
+
+.node circle {
+  fill: #29e703;
+  /* fill-opacity: 0.6; */
+  stroke: #168700;
+  stroke-width: 1px;
+}
+.node text {
+  font-size: 22px;
+  fill: #ffffff;
+}
+
+.highlightedNode circle {
+  fill: red;
+  stroke: red;
+  stroke-width: 1px;
+}
+
+.null-node,
+.null-link {
+  visibility: hidden;
+}
+
+line {
+  stroke: #099b96;
+}
+
+.LinkAnimation {
+  stroke: red;
+  stroke-dasharray: 500;
+  animation: filling 1s linear forwards;
+}
+
+@keyframes filling {
+  from {
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
